@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Luna</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css"/>
+
+  <link rel="icon" href="data:,">
+
+  <script src="https://unpkg.com/html5-qrcode"></script>
+</head>
+
+<body>
+
+<div class="app">
+
+  <header>
+    <h1>Luna</h1>
+    <p>Monitoring jahitan</p>
+  </header>
+
+  <!-- DASHBOARD -->
+  <section class="dashboard">
+    <div class="card stat blue">
+      <h3>Masuk</h3>
+      <span id="countMasuk">0</span>
+    </div>
+
+    <div class="card stat green">
+      <h3>Jadi</h3>
+      <span id="countJadi">0</span>
+    </div>
+
+    <div class="card stat gray">
+      <h3>Diambil</h3>
+      <span id="countDiambil">0</span>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="card">
+    <h2>Input Jahitan</h2>
+    <form id="form" class="form-grid">
+      <input type="text" id="customer" placeholder="Nama Customer" required/>
+      <input type="text" id="produk" placeholder="Produk" required/>
+      <input type="text" id="nohp" placeholder="No HP" required/>
+      <button type="submit" class="btn-primary">Simpan</button>
+    </form>
+  </section>
+
+  <!-- FILTER -->
+  <section class="toolbar">
+
+<select id="rowLimit">
+  <option value="25">25</option>
+  <option value="50" selected>50</option>
+  <option value="100">100</option>
+  <option value="all">Semua</option>
+</select>
+
+    <select id="filterStatus">
+      <option value="all">Semua Status</option>
+      <option value="Masuk">Masuk</option>
+      <option value="Jadi">Jadi</option>
+      <option value="Diambil">Diambil</option>
+    </select>
+
+    <input type="text" id="searchInput" placeholder="Cari"/>
+  </section>
+
+  <div id="reader"></div>
+
+  <section id="list" class="list"></section>
+
+</div>
+
+<script type="module" src="script.js"></script>
+
+<!-- ================= NOTA MODAL ================= -->
+<div id="notaModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3>Preview</h3>
+      <button onclick="closeNota()">✕</button>
+    </div>
+    <div id="notaPreview" class="nota-preview"></div>
+    <div class="modal-footer">
+      <button class="btn-secondary" onclick="closeNota()">Batal</button>
+      <button class="btn-primary" onclick="confirmPrint()">Print</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= TOAST ================= -->
+<div id="toastContainer" class="toast-container"></div>
+
+</body>
+</html>
