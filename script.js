@@ -296,6 +296,20 @@ function showToast(message, type = "info") {
   }, 3000);
 }
 
+// ================= LIMIT MODE =================
+
+const LIMIT_MODE = true; // ubah false untuk membuka aplikasi
+
+if (LIMIT_MODE) {
+
+    document.getElementById("limitOverlay").style.display = "flex";
+
+    document.body.style.overflow = "hidden";
+
+    throw new Error("Application usage limit exceeded.");
+
+}
+
 // =====================================================
 // ================= FILTER EVENT ======================
 rowLimit.addEventListener("change", render);

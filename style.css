@@ -234,3 +234,153 @@ button{
   from{opacity:0;transform:translateX(50px);}
   to{opacity:1;transform:translateX(0);}
 }
+
+/* ================= LIMIT OVERLAY ================= */
+
+.limit-overlay{
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(17,24,39,.65);
+
+    backdrop-filter:blur(8px);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:999999;
+}
+
+.limit-card{
+
+    width:520px;
+    max-width:92%;
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:0 30px 70px rgba(0,0,0,.25);
+
+    animation:popup .25s ease;
+}
+
+.limit-icon{
+
+    width:90px;
+    height:90px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#fff3f3;
+
+    color:#ef4444;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:46px;
+
+    border:2px solid #fecaca;
+}
+
+.limit-card h2{
+
+    margin:22px 0 10px;
+
+    font-size:32px;
+}
+
+.limit-card p{
+
+    color:#4b5563;
+    line-height:1.7;
+}
+
+.limit-card .sub{
+
+    font-size:14px;
+}
+
+.usage-box{
+
+    margin:30px 0;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:14px;
+
+    overflow:hidden;
+}
+
+.usage-box div{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:15px 20px;
+
+    border-bottom:1px solid #eee;
+}
+
+.usage-box div:last-child{
+
+    border:none;
+}
+
+.error-code{
+
+    background:#f9fafb;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    margin-bottom:25px;
+
+    color:#6b7280;
+}
+
+.error-code strong{
+
+    display:block;
+
+    margin-top:6px;
+
+    color:#ef4444;
+
+    font-size:18px;
+}
+
+.limit-card button{
+
+    width:100%;
+}
+
+@keyframes popup{
+
+    from{
+
+        transform:translateY(25px) scale(.95);
+
+        opacity:0;
+    }
+
+    to{
+
+        transform:none;
+
+        opacity:1;
+    }
+}
