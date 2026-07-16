@@ -135,6 +135,7 @@ filtered.slice(0, limitValue).forEach(item => {
       <b>${item.invoice}</b><br>
       ${item.customer} - ${item.produk}<br>
       HP: ${item.no_hp}<br>
+      Keterangan: ${item.keterangan}<br>
       Status: <b>${item.status}</b><br>
       <button onclick="directPrint(${item.invoice})">Print</button>
     `;
