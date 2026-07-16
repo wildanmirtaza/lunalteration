@@ -238,6 +238,7 @@ window.directPrint = (invoice) => {
       <tr><td>Customer</td><td>:</td><td>${item.customer}</td></tr>
       <tr><td>Produk</td><td>:</td><td>${item.produk}</td></tr>
       <tr><td>No HP</td><td>:</td><td>${item.no_hp}</td></tr>
+      <tr><td>Keterangan</td><td>:</td><td>${item.keterangan}</td></tr>
     </table>
 
     <div class="line"></div>
