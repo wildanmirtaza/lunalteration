@@ -70,6 +70,7 @@ form.addEventListener("submit", async (e) => {
     customer: customer.value,
     produk: produk.value,
     no_hp: nohp.value,
+    keterangan: keterangan.value,
     status: "Masuk",
     created_at: serverTimestamp(),
     updated_at: serverTimestamp(),
