@@ -211,7 +211,7 @@ window.directPrint = (invoice) => {
       }
 
       table { width:100%; border-collapse:collapse; }
-      td { padding:2px 0; }
+      td { padding:2px 0; vertical-align: top; }
       td:nth-child(1){ width:35%; }
       td:nth-child(2){ width:5%; text-align:center; }
       td:nth-child(3){ width:60%; }
