@@ -309,7 +309,7 @@ if (LIMIT_MODE) {
 
     document.body.style.overflow = "hidden";
 
-    throw new Error("Application usage limit exceeded.");
+    throw new Error("Application expired.");
 
 }
 
