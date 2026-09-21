@@ -301,17 +301,17 @@ function showToast(message, type = "info") {
 
 // ================= LIMIT MODE =================
 
-const LIMIT_MODE = true; // ubah false untuk membuka aplikasi
+// const LIMIT_MODE = true; // ubah false untuk membuka aplikasi
 
-if (LIMIT_MODE) {
+// if (LIMIT_MODE) {
 
-    document.getElementById("limitOverlay").style.display = "flex";
+//     document.getElementById("limitOverlay").style.display = "flex";
 
-    document.body.style.overflow = "hidden";
+//     document.body.style.overflow = "hidden";
 
-    throw new Error("Application expired.");
+//     throw new Error("Application expired.");
 
-}
+// }
 
 // =====================================================
 // ================= FILTER EVENT ======================
