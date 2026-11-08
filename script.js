@@ -320,4 +320,6 @@ filterStatus.addEventListener("change", render);
 searchInput.addEventListener("input", render);
 
 // =====================================================
-listenRealtime();
+if (!LIMIT_MODE) {
+  listenRealtime();
+}
