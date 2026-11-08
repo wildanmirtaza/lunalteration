@@ -235,153 +235,313 @@ button{
   to{opacity:1;transform:translateX(0);}
 }
 
+
 /* ================= LIMIT OVERLAY ================= */
-/* 
-.limit-overlay{
 
-    position:fixed;
-    inset:0;
+.limit-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(17, 24, 39, .65);
+    backdrop-filter: blur(8px);
 
-    background:rgba(17,24,39,.65);
+    display: none;
+    justify-content: center;
+    align-items: center;
 
-    backdrop-filter:blur(8px);
+    padding: 20px;
+    overflow-y: auto;
 
-    display:none;
-
-    justify-content:center;
-    align-items:center;
-
-    z-index:999999;
+    z-index: 999999;
 }
 
-.limit-card{
+.limit-card {
+    width: 520px;
+    max-width: 100%;
 
-    width:520px;
-    max-width:92%;
+    background: #fff;
+    border-radius: 22px;
 
-    background:#fff;
+    padding: 40px;
+    text-align: center;
 
-    border-radius:22px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, .25);
 
-    padding:40px;
-
-    text-align:center;
-
-    box-shadow:0 30px 70px rgba(0,0,0,.25);
-
-    animation:popup .25s ease;
+    animation: popup .25s ease;
 }
 
-.limit-icon{
+.limit-icon {
+    width: 76px;
+    height: 76px;
 
-    width:90px;
-    height:90px;
+    margin: auto;
 
-    margin:auto;
+    border-radius: 50%;
+    background: #fff3f3;
+    color: #ef4444;
 
-    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    background:#fff3f3;
-
-    color:#ef4444;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    font-size:46px;
-
-    border:2px solid #fecaca;
+    font-size: 40px;
+    border: 2px solid #fecaca;
 }
 
-.limit-card h2{
-
-    margin:22px 0 10px;
-
-    font-size:32px;
+.limit-card h2 {
+    margin: 22px 0 10px;
+    font-size: 27px;
 }
 
-.limit-card p{
-
-    color:#4b5563;
-    line-height:1.7;
+.limit-card p {
+    color: #4b5563;
+    line-height: 1.7;
 }
 
-.limit-card .sub{
-
-    font-size:14px;
+.limit-card .sub {
+    font-size: 14px;
 }
 
-.usage-box{
+/* ================= USAGE BOX ================= */
 
-    margin:30px 0;
+.usage-box {
+    margin: 25px 0;
 
-    border:1px solid #e5e7eb;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    overflow: hidden;
 
-    border-radius:14px;
-
-    overflow:hidden;
+    background: #fff;
+    font-family: inherit;
 }
 
-.usage-box div{
+.usage-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    display:flex;
+    gap: 12px;
+    padding: 15px 20px;
 
-    justify-content:space-between;
+    border-bottom: 1px solid #edf0f3;
+    text-align: left;
 
-    padding:15px 20px;
-
-    border-bottom:1px solid #eee;
+    font-size: 15px;
+    color: #475569;
 }
 
-.usage-box div:last-child{
-
-    border:none;
+.usage-row strong {
+    color: #172033;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
 }
 
-.error-code{
+/* Subtotal */
 
-    background:#f9fafb;
-
-    padding:14px;
-
-    border-radius:10px;
-
-    margin-bottom:25px;
-
-    color:#6b7280;
+.subtotal-row {
+    background: #f8fafc;
+    border-top: 1px solid #e5e7eb;
 }
 
-.error-code strong{
-
-    display:block;
-
-    margin-top:6px;
-
-    color:#ef4444;
-
-    font-size:18px;
+.subtotal-row span,
+.subtotal-row strong {
+    color: #334155;
+    font-weight: 700;
 }
 
-.limit-card button{
+/* Kredit Hosting Sebelumnya */
 
-    width:100%;
+.credit-row {
+    background: #f0fdf4;
 }
 
-@keyframes popup{
+.credit-row span {
+    color: #15803d;
+    font-size: 14px;
+}
 
-    from{
+.credit-row strong {
+    color: #16a34a;
+    font-weight: 700;
+}
 
-        transform:translateY(25px) scale(.95);
+/* Total Pembayaran */
 
-        opacity:0;
+.total-row {
+    background: #f8fafc;
+
+    padding-top: 19px;
+    padding-bottom: 19px;
+
+    border-bottom: none;
+}
+
+.total-row span {
+    color: #172033;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.total-row strong {
+    color: #2563eb;
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -.4px;
+}
+
+/* ================= PAYMENT BUTTON ================= */
+
+.limit-payment {
+    display: block;
+    width: 100%;
+
+    padding: 14px 16px;
+    margin: 20px 0;
+
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* ================= ERROR CODE ================= */
+
+.limit-card .error-code {
+    background: #f9fafb;
+    padding: 12px;
+    border-radius: 10px;
+
+    margin-top: 20px;
+
+    color: #6b7280;
+    font-size: 11px;
+    letter-spacing: .5px;
+}
+
+.limit-card .error-code strong {
+    display: block;
+    margin-top: 6px;
+
+    color: #6b7280;
+    font-size: 13px;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes popup {
+    from {
+        transform: translateY(25px) scale(.95);
+        opacity: 0;
     }
 
-    to{
-
-        transform:none;
-
-        opacity:1;
+    to {
+        transform: none;
+        opacity: 1;
     }
 }
- */
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+    .limit-card {
+        padding: 28px 22px;
+    }
+
+    .limit-card h2 {
+        font-size: 23px;
+    }
+
+    .usage-row {
+        padding: 14px;
+        font-size: 13px;
+    }
+
+    .usage-row strong {
+        font-size: 13px;
+    }
+
+    .credit-row span {
+        font-size: 12px;
+    }
+
+    .total-row strong {
+        font-size: 17px;
+    }
+}
+
+
+/* ================= COMPACT LIMIT OVERLAY ================= */
+
+/* Batasi tinggi modal dan jaga tetap di tengah */
+.limit-card {
+    padding: 28px 36px;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+}
+
+/* Perkecil ikon */
+.limit-icon {
+    width: 66px;
+    height: 66px;
+    font-size: 34px;
+}
+
+/* Judul */
+.limit-card h2 {
+    margin: 16px 0 8px;
+    font-size: 25px;
+}
+
+/* Deskripsi */
+.limit-card p {
+    margin: 8px 0;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.limit-card .sub {
+    font-size: 13px;
+}
+
+/* Rincian biaya */
+.usage-box {
+    margin: 18px 0;
+}
+
+.usage-row {
+    padding: 12px 18px;
+}
+
+/* Total pembayaran */
+.total-row {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* Tombol pembayaran */
+.limit-payment {
+    margin: 16px 0;
+    padding: 13px 16px;
+}
+
+/* Kode informasi */
+.limit-card .error-code {
+    margin-top: 12px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .limit-card {
+        padding: 24px 20px;
+    }
+
+    .limit-card h2 {
+        font-size: 22px;
+    }
+
+    .usage-row {
+        padding: 11px 13px;
+    }
+}

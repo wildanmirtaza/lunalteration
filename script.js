@@ -301,19 +301,19 @@ function showToast(message, type = "info") {
 
 // ================= LIMIT MODE =================
 
-// const LIMIT_MODE = true; // ubah false untuk membuka aplikasi
+const LIMIT_MODE = true;
 
-// if (LIMIT_MODE) {
+if (LIMIT_MODE) {
+    const overlay = document.getElementById("limitOverlay");
 
-//     document.getElementById("limitOverlay").style.display = "flex";
-
-//     document.body.style.overflow = "hidden";
-
-//     throw new Error("Application expired.");
-
-// }
+    if (overlay) {
+        overlay.style.display = "flex";
+        document.body.style.overflow = "hidden";
+    }
+}
 
 // =====================================================
+
 // ================= FILTER EVENT ======================
 rowLimit.addEventListener("change", render);
 filterStatus.addEventListener("change", render);
