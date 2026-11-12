@@ -301,7 +301,7 @@ function showToast(message, type = "info") {
 
 // ================= LIMIT MODE =================
 
-const LIMIT_MODE = true;
+const LIMIT_MODE = false;
 
 if (LIMIT_MODE) {
     const overlay = document.getElementById("limitOverlay");
